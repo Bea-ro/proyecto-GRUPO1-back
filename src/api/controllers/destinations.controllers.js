@@ -2,7 +2,7 @@ const Destination = require("../models/destination.model");
 
 const getAllDestinations = async (req, res, next) => {
   try {
-    const destinations = await Destination.find();
+    const destinations = await Destination.find().populate(flights).populate(hotels)
     return res.status(200).json(destinations);
   } catch (error) {
     return next("Destinations were not found", error);
@@ -61,10 +61,34 @@ const deleteDestination = async (req, res, next) => {
   }
 };
 
+const uploadDestinationImg = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    if (req.file) {
+      const originalDestination = await Destination.findById(id);
+      
+      // if (originalDestination.image) {
+      //   deleteImgCloudinary(originalDestination.image);
+      // }
+
+      const updatedDestination = await Destination.findByIdAndUpdate(
+        id,
+        { $addToSet: { images: req.file.path } },
+        { new: true }
+      );
+      
+      return res.status(200).json(updatedDestination);
+    }
+  } catch (error) {
+    return res.status(400).json({ mensaje: 'Error uploading image', error: error });
+  }
+};
+
 module.exports = {
   getAllDestinations,
   createDestination,
   getDestinationById,
   updateDestination,
-  deleteDestination
+  deleteDestination,
+  uploadDestinationImg
 };

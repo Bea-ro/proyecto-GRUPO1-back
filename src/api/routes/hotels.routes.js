@@ -4,17 +4,19 @@ const {
   getHotelById,
   createHotel,
   updateHotel,
-  deleteHotel
+  deleteHotel,
+  uploadHotelImg
 } = require('../controllers/hotels.controllers');
+const { uploadImgCloudinary } = require('../middlewares/uploadImg');
 const router = express.Router();
 // const { isAuth } = require('../../middlewares/authentication');
-// const { uploadImgCloudinary } = require('../../middlewares/uploadFile');
+
 
 router.get('/', getAllHotels);
 router.get('/:id', getHotelById);
 router.post('/', createHotel);
 router.put('/:id', updateHotel);
-// router.patch('/:id', [isAuth], uploadImgCloudinary.single('image'), uploadHotelImg);
+router.patch('/:id', uploadImgCloudinary.single('images'), uploadHotelImg);
 router.delete('/:id', deleteHotel);
 
 module.exports = router;

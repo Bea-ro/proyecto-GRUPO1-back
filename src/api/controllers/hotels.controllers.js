@@ -61,10 +61,35 @@ const deleteHotel = async (req, res, next) => {
   }
 };
 
+const uploadHotelImg = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    if (req.file) {
+      const originalHotel = await Hotel.findById(id);
+      
+      // if (originalHotel.image) {
+      //   deleteImgCloudinary(originalHotel.image);
+      // }
+
+      const updatedHotel = await Hotel.findByIdAndUpdate(
+        id,
+        { $addToSet: { images: req.file.path } },
+        { new: true }
+      );
+      
+      return res.status(200).json(updatedHotel);
+    }
+  } catch (error) {
+    return res.status(400).json({ mensaje: 'Error uploading image', error: error });
+  }
+};
+
+
 module.exports = {
   getAllHotels,
   createHotel,
   getHotelById,
   updateHotel,
-  deleteHotel
+  deleteHotel,
+  uploadHotelImg
 };
