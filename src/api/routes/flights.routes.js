@@ -6,13 +6,13 @@ const {
   updateFlight,
   deleteFlight
 } = require('../controllers/flights.controllers');
-const router = express.Router();
+const flightsRouter = express.Router();
 
-router.get('/', getAllFlights);
-router.get('/:id', getFlightById);
-router.post('/', createFlight);
-router.put('/:id', updateFlight);
-router.delete('/:id', deleteFlight);
+flightsRouter.get('/', getAllFlights);
+flightsRouter.get('/:id', getFlightById);
+flightsRouter.post('/', createFlight);
+flightsRouter.put('/:id', updateFlight);
+flightsRouter.delete('/:id', deleteFlight);
 
 
-module.exports = router;
+module.exports = flightsRouter;

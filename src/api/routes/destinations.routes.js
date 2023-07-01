@@ -8,15 +8,16 @@ const {
   uploadDestinationImg
 } = require('../controllers/destinations.controllers');
 const { uploadImgCloudinary } = require('../middlewares/uploadImg');
-const router = express.Router();
-//const { isAuth } = require('../../middlewares/authentication');
+const { isAuth } = require('../middlewares/isAuth.middleware');
+const destinationsRouter = express.Router();
 
 
-router.get('/', getAllDestinations);
-router.get('/:id', getDestinationById);
-router.post('/', createDestination);
-router.put('/:id', updateDestination);
-router.patch('/:id', uploadImgCloudinary.single('images'), uploadDestinationImg);
-router.delete('/:id', deleteDestination);
 
-module.exports = router;
+destinationsRouter.get('/', [isAuth], getAllDestinations);
+destinationsRouter.get('/:id', getDestinationById);
+destinationsRouter.post('/', createDestination);
+destinationsRouter.put('/:id', updateDestination);
+destinationsRouter.patch('/:id', uploadImgCloudinary.single('images'), uploadDestinationImg);
+destinationsRouter.delete('/:id', deleteDestination);
+
+module.exports = destinationsRouter;

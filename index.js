@@ -2,12 +2,14 @@ const express = require('express');
 const { connectDB } = require('./src/utils/connectDB');
 require('dotenv').config();
 const mainRouter = require('./src/api/routes/index.routes');
+const { configCloudinary } = require('./src/api/middlewares/uploadImg');
+
 
 const server = express(); //podría ser tb const server = express()
 server.use(express.json({limit: '5mb'})) 
 server.use(express.urlencoded({ limit: "5mb", extended: false }));
 
-
+configCloudinary()
 connectDB();
 
 server.use((req, res, next) => { //define métodos y tipo de contenidos aceptados como requests

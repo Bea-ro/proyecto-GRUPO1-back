@@ -8,15 +8,15 @@ const {
   uploadHotelImg
 } = require('../controllers/hotels.controllers');
 const { uploadImgCloudinary } = require('../middlewares/uploadImg');
-const router = express.Router();
-// const { isAuth } = require('../../middlewares/authentication');
+const hotelsRouter = express.Router();
+//const { isAuth } = require('../../middlewares/isAuth.middleware');
 
 
-router.get('/', getAllHotels);
-router.get('/:id', getHotelById);
-router.post('/', createHotel);
-router.put('/:id', updateHotel);
-router.patch('/:id', uploadImgCloudinary.single('images'), uploadHotelImg);
-router.delete('/:id', deleteHotel);
+hotelsRouter.get('/', getAllHotels);
+hotelsRouter.get('/:id', getHotelById);
+hotelsRouter.post('/', createHotel);
+hotelsRouter.put('/:id', updateHotel);
+hotelsRouter.patch('/:id', uploadImgCloudinary.single('images'), uploadHotelImg);
+hotelsRouter.delete('/:id', deleteHotel);
 
-module.exports = router;
+module.exports = hotelsRouter;

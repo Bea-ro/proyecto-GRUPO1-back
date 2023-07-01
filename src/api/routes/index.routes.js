@@ -2,13 +2,13 @@ const express = require('express');
 const destinationsRouter = require('./destinations.routes');
 const flightsRouter = require('./flights.routes');
 const hotelsRouter = require('./hotels.routes');
-// const usersRouter = require('./users');
+const usersRouter = require('./users.routes');
 
-const router = express.Router();
+const mainRouter = express.Router();
 
-router.use('/destinations', destinationsRouter);
-router.use('/flights', flightsRouter);
-router.use('/hotels', hotelsRouter);
-// router.use('/users', usersRouter);
+mainRouter.use('/destinations', destinationsRouter);
+mainRouter.use('/flights', flightsRouter);
+mainRouter.use('/hotels', hotelsRouter);
+mainRouter.use('/users', usersRouter);
 
-module.exports = router;
+module.exports = mainRouter;
