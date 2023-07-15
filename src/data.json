@@ -1,4 +1,4 @@
-const hotels = [
+[
   {
       "name": "Hotel Paris",
       "images": [
@@ -96,7 +96,8 @@ const hotels = [
       "price": 160
   }
 ]
-const flights = [
+
+[
   {
       "departureCity": "Paris",
       "arrivalCity": "Dubai",
