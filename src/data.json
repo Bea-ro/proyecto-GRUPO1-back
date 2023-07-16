@@ -1,4 +1,5 @@
-[
+{ 
+  "hotels": [
   {
       "name": "Hotel Paris",
       "images": [
@@ -95,9 +96,8 @@
       "rating": 7,
       "price": 160
   }
-]
-
-[
+],
+"flights": [
   {
       "departureCity": "Paris",
       "arrivalCity": "Dubai",
@@ -163,3 +163,4 @@
       "price": 550
   }
 ]
+}
