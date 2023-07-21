@@ -65,7 +65,7 @@ const uploadDestinationImg = async (req, res, next) => {
   try {
     const { id } = req.params;
     if (req.file) {
-      const originalDestination = await Destination.findById(id);
+      // const originalDestination = await Destination.findById(id);
       
       // if (originalDestination.image) {
       //   deleteImgCloudinary(originalDestination.image);
