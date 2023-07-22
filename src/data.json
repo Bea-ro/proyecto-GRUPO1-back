@@ -1,8 +1,8 @@
 {
   "hotels": [
     {
-      "name": "Hotel Paris",
-      "images": ["image1.jpg", "image2.jpg"],
+      "name": "Hotel Le France",
+      "images": [],
       "city": "Paris",
       "airportDistance": 10,
       "stars": 4,
@@ -10,8 +10,8 @@
       "price": 150
     },
     {
-      "name": "Hotel Dubai",
-      "images": ["image3.jpg", "image4.jpg"],
+      "name": "Hotel HighSky",
+      "images": [],
       "city": "Dubai",
       "airportDistance": 20,
       "stars": 5,
@@ -19,8 +19,8 @@
       "price": 300
     },
     {
-      "name": "Hotel Rome",
-      "images": ["image5.jpg", "image6.jpg"],
+      "name": "Hotel L'etrusco",
+      "images": [],
       "city": "Rome",
       "airportDistance": 15,
       "stars": 4,
@@ -28,8 +28,8 @@
       "price": 200
     },
     {
-      "name": "Hotel St Lucia",
-      "images": ["image7.jpg", "image8.jpg"],
+      "name": "Hotel The Saint",
+      "images": [],
       "city": "St Lucia",
       "airportDistance": 5,
       "stars": 3,
@@ -37,8 +37,8 @@
       "price": 120
     },
     {
-      "name": "Hotel Bali",
-      "images": ["image9.jpg", "image10.jpg"],
+      "name": "Hotel Bali-Beach",
+      "images": [],
       "city": "Bali",
       "airportDistance": 25,
       "stars": 5,
@@ -46,8 +46,8 @@
       "price": 400
     },
     {
-      "name": "Hotel Bora Bora",
-      "images": ["image11.jpg", "image12.jpg"],
+      "name": "Hotel Bora Bora original",
+      "images": [],
       "city": "Bora Bora",
       "airportDistance": 30,
       "stars": 5,
@@ -55,8 +55,8 @@
       "price": 500
     },
     {
-      "name": "Hotel London",
-      "images": ["image13.jpg", "image14.jpg"],
+      "name": "Hotel Ritz",
+      "images": [],
       "city": "London",
       "airportDistance": 8,
       "stars": 4,
@@ -64,8 +64,80 @@
       "price": 180
     },
     {
-      "name": "Hotel Tahiti",
-      "images": ["image15.jpg", "image16.jpg"],
+      "name": "Hotel Aloha",
+      "images": [],
+      "city": "Tahiti",
+      "airportDistance": 12,
+      "stars": 3,
+      "rating": 7,
+      "price": 160
+    },
+    {
+      "name": "Hotel Diana",
+      "images": [],
+      "city": "London",
+      "airportDistance": 300,
+      "stars": 5,
+      "rating": 6,
+      "price": 120
+    },
+    {
+      "name": "France Hotel",
+      "images": [],
+      "city": "Paris",
+      "airportDistance": 10,
+      "stars": 5,
+      "rating": 9,
+      "price": 210
+    },
+    {
+      "name": "Royal Hotel",
+      "images": [],
+      "city": "Dubai",
+      "airportDistance": 20,
+      "stars": 4,
+      "rating": 9,
+      "price": 430
+    },
+    {
+      "name": "Hotel La Piedad",
+      "images": [],
+      "city": "Rome",
+      "airportDistance": 15,
+      "stars": 4,
+      "rating": 7,
+      "price": 200
+    },
+    {
+      "name": "Hotel The Saint",
+      "images": [],
+      "city": "St Lucia",
+      "airportDistance": 5,
+      "stars": 3,
+      "rating": 6,
+      "price": 120
+    },
+    {
+      "name": "Hotel Bali-Beach",
+      "images": [],
+      "city": "Bali",
+      "airportDistance": 25,
+      "stars": 5,
+      "rating": 9,
+      "price": 400
+    },
+    {
+      "name": "Hotel Bora Bora original",
+      "images": [],
+      "city": "Bora Bora",
+      "airportDistance": 30,
+      "stars": 5,
+      "rating": 9,
+      "price": 500
+    },
+    {
+      "name": "Hotel Aloha",
+      "images": [],
       "city": "Tahiti",
       "airportDistance": 12,
       "stars": 3,
