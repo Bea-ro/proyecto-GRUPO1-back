@@ -143,7 +143,80 @@
       "stars": 3,
       "rating": 7,
       "price": 160
+    },
+    {
+      "name": "Hotel London City",
+      "images": [],
+      "city": "London",
+      "airportDistance": 300,
+      "stars": 5,
+      "rating": 6,
+      "price": 120
+    },
+    {
+      "name": "Hotel Louvre",
+      "images": [],
+      "city": "Paris",
+      "airportDistance": 10,
+      "stars": 5,
+      "rating": 9,
+      "price": 210
+    },
+    {
+      "name": "Hotel NH",
+      "images": [],
+      "city": "Dubai",
+      "airportDistance": 20,
+      "stars": 4,
+      "rating": 9,
+      "price": 430
+    },
+    {
+      "name": "Hotel Capitolio",
+      "images": [],
+      "city": "Rome",
+      "airportDistance": 15,
+      "stars": 4,
+      "rating": 7,
+      "price": 200
+    },
+    {
+      "name": "Hotel Caribe",
+      "images": [],
+      "city": "St Lucia",
+      "airportDistance": 5,
+      "stars": 3,
+      "rating": 6,
+      "price": 120
+    },
+    {
+      "name": "Hotel Resort",
+      "images": [],
+      "city": "Bali",
+      "airportDistance": 25,
+      "stars": 5,
+      "rating": 9,
+      "price": 400
+    },
+    {
+      "name": "Hotel Sotavento",
+      "images": [],
+      "city": "Bora Bora",
+      "airportDistance": 30,
+      "stars": 5,
+      "rating": 9,
+      "price": 500
+    },
+    {
+      "name": "Hotel Fenix",
+      "images": [],
+      "city": "Tahiti",
+      "airportDistance": 12,
+      "stars": 3,
+      "rating": 7,
+      "price": 160
     }
+
   ],
   "flights": [
     {
