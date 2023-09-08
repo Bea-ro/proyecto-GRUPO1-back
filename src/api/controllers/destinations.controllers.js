@@ -33,9 +33,11 @@ const updateDestination = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    const newDestination = new Destination(req.body);
+    //const newDestination = new Destination(req.body);
 
-    newDestination._id = id;
+    //newDestination._id = id;
+
+    const newDestination = await Destination.findById(id)
 
     const updatedDestination = await Destination.findByIdAndUpdate(
       id,
