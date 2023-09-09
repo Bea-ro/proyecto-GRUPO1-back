@@ -5,6 +5,13 @@ const UserSchema = new mongoose.Schema(
   {
     email: { type: String, required: true, trim: true },
     password: { type: String, required: true, trim: true },
+    rol: {
+      type: String,
+      enum: ['admin', 'customer'],
+      default: 'customer',
+      required: true,
+      trim: true
+    }
   },
   {
     timestamps: true,
