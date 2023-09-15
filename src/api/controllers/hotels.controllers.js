@@ -37,6 +37,10 @@ const updateHotel = async (req, res, next) => {
 
     newHotel._id = id;
 
+    const oldHotel = await Hotel.findById(id)
+    newHotel.images = [ ...oldHotel.images, ...newHotel.images];
+    
+
     const updatedHotel = await Hotel.findByIdAndUpdate(
       id,
       newHotel,

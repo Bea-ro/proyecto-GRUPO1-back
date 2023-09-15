@@ -35,15 +35,17 @@ const updateDestination = async (req, res, next) => {
 
     const newDestination = new Destination(req.body);
     newDestination._id = id;
+  
 
     const oldDestination = await Destination.findById(id)
     newDestination.images = [ ...oldDestination.images, ...newDestination.images];
     newDestination.hotels = [ ...oldDestination.hotels, ...newDestination.hotels];
     newDestination.flights = [ ...oldDestination.flights, ...newDestination.flights];
+  
 
     const updatedDestination = await Destination.findByIdAndUpdate(
       id,
-      newDestination,
+      req.body,
       {
         new: true,
       }
